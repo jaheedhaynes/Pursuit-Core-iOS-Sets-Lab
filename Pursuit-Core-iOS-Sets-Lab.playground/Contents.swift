@@ -35,7 +35,9 @@ for num in scores {
 }
 print(scoresThatAppearOnce)
 
-assert(scoresThatAppearOnce == [1, 99], "Was expecting [1, 99], but got \(scoresThatAppearOnce)")
+// Your code here
+
+//assert(scoresThatAppearOnce == [1, 99], "Was expecting [1, 99], but got \(scoresThatAppearOnce)")
 
 // Question Three
 
@@ -46,11 +48,17 @@ assert(scoresThatAppearOnce == [1, 99], "Was expecting [1, 99], but got \(scores
 let arrOne = [1,2,3,4,5]
 let arrTwo = [3,4,5,6,7]
 
-var arrThree: [Int] = []
+//var arrThree = Array(Set(arrOne + arrTwo)).sorted()
 
-// Your code here
+//or
 
-//assert(arrThree == [1,2,3,4,5,6,7], "Was expecting [1,2,3,4,5,6,7], but got \(arrThree)")
+let addedOne = Set(arrOne)
+let addedTwo = Set(arrTwo)
+
+var arrThree = addedOne.union(addedTwo).sorted()
+
+
+assert(arrThree == [1,2,3,4,5,6,7], "Was expecting [1,2,3,4,5,6,7], but got \(arrThree)")
 
 // b.
 
@@ -74,7 +82,7 @@ let numsTwo = [1, 2, 3, 4, 5, 6]
 let numsThree = [5, 6, 7, 8, 9, 10, 11, 12]
 let numsFour = [1, 3, 4, 5, 6, 7, 9]
 
-var allNumsWithNoDuplicates: [Int] = []
+var allNumsWithNoDuplicates: Array(Set(numsOne + numsTwo + numsThree + numsFour)).sorted()
 
 // Your code here
 
