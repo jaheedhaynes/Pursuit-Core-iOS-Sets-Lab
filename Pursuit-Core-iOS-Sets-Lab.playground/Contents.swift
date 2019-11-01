@@ -22,22 +22,24 @@ let scores = [1, 77, 83, 32, 77, 77, 83, 32, 99]
 
 var scoresThatAppearOnce = [Int]()
 
+//
+
 var visitedNum: [Int] = []
-for num in scores {
-   if !visitedNum.contains(num) {
-       scoresThatAppearOnce.append(num)
-       visitedNum.append(num)
+for score in scores {
+   if !visitedNum.contains(score) {
+       scoresThatAppearOnce.append(score)
+       visitedNum.append(score)
    } else {
-       if let index = scoresThatAppearOnce.firstIndex(of: num) {
+       if let index = scoresThatAppearOnce.firstIndex(of: score) {
            scoresThatAppearOnce.remove(at: index)
        }
    }
 }
 print(scoresThatAppearOnce)
 
-// Your code here
 
-//assert(scoresThatAppearOnce == [1, 99], "Was expecting [1, 99], but got \(scoresThatAppearOnce)")
+
+assert(scoresThatAppearOnce == [1, 99], "Was expecting [1, 99], but got \(scoresThatAppearOnce)")
 
 // Question Three
 
@@ -71,7 +73,7 @@ var arrSix: [Int] = []
 
 // Your code here
 
-//assert(arrSix == [3,4,5], "Was expecting [3,4,5], but got \(arrSix)")
+assert(arrSix == [3,4,5], "Was expecting [3,4,5], but got \(arrSix)")
 
 // Question Four
 
@@ -103,11 +105,16 @@ var strOneIsPangram: Bool = false
 var strTwoIsPangram: Bool = false
 var strThreeIsPangram: Bool = false
 
-// Your code here
 
-//assert(strOneIsPangram == true, "Was expecting true, but got \(strOneIsPangram)")
-//assert(strTwoIsPangram == false, "Was expecting false, but got \(strTwoIsPangram)")
-//assert(strThreeIsPangram == true, "Was expecting false, but got \(strThreeIsPangram)")
+// Answer
+
+let alphabet = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
+
+
+assert(strOneIsPangram == true, "Was expecting true, but got \(strOneIsPangram)")
+assert(strTwoIsPangram == false, "Was expecting false, but got \(strTwoIsPangram)")
+assert(strThreeIsPangram == true, "Was expecting false, but got \(strThreeIsPangram)")
+
 
 
 
